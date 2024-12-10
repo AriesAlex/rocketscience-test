@@ -27,6 +27,9 @@ export const useHotelsStore = defineStore('hotels', () => {
     applyFilters()
   }
 
+  // Было бы лучше использовать computed свойство, но
+  // по тз требуется чтобы фильтры применять только
+  // при нажатии на кнопку
   function applyFilters() {
     filteredHotels.value = hotels.value.filter(hotel => {
       if (
